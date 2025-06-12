@@ -1,0 +1,22 @@
+{
+  "alerts": [
+    {
+      "title": "System Update",
+      "desc": "System maintenance scheduled for 22nd Nov",
+      "meta": "15-Sep-2018 at 07:21 pm",
+      "checked": true
+    },
+    {
+      "title": "New Feature",
+      "desc": "New dashboard feature released",
+      "meta": "14-Sep-2018 at 10:00 am",
+      "checked": true
+    }
+  ],
+  "buttons": [
+    {
+      "label": "SHOW ALL",
+      "class": "show-all-btn"
+    }
+  ]
+}

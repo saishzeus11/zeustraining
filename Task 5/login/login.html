@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="login-header-logo"></div>
+        </header>
+
+        <main>
+            <div>
+                <div class="backImage">
+
+                </div>
+                <div style=" text-align: center;width: 100%;font-size: 24px;">
+                  <b>Log in with Quantum</b>  
+                </div>
+            </div>
+            <form action="">
+
+                <div class="main-radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="schoolType" value="district" />
+                        <img src="./quantumAssets/icons/radio-button-off.svg" class="radio-icon off" />
+                        <img src="./quantumAssets/icons/radio-button-on.svg" class="radio-icon on" />
+                        <span>District</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="schoolType" value="independent" />
+                        <img src="./quantumAssets/icons/radio-button-off.svg" class="radio-icon off" />
+                        <img src="./quantumAssets/icons/radio-button-on.svg" class="radio-icon on" />
+                        <span>Independent School</span>
+                    </label>
+                </div>
+
+                <div class="select-state">
+                    <label for="state">State*</label>
+                    <select id="state" name="state">
+                        <option value="">Alabama</option>
+                        <option value="AP">Andhra Pradesh</option>
+                        <option value="AR">Arunachal Pradesh</option>
+                        <option value="AS">Assam</option>
+                        <option value="BR">Bihar</option>
+                        <option value="CT">Chhattisgarh</option>
+
+                    </select>
+                </div>
+
+                <div class="select-district">
+                    <label for="district">District*</label>
+                    <select id="district" name="district">
+                        <option value="">Alabama School District</option>
+                        <option value="AP">Andhra Pradesh</option>
+                        <option value="AR">Arunachal Pradesh</option>
+                        <option value="AS">Assam</option>
+                        <option value="BR">Bihar</option>
+                        <option value="CT">Chhattisgarh</option>
+
+                    </select>
+                </div>
+
+                <div class="input-username">
+                    <input type="text" id="username" name="username" placeholder="Username/Email ID*" />
+
+                    <a href="#" class="forgot-username">Forgot Username?</a>
+                </div>
+
+                <div class="main-password">
+
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Password*" />
+                        <!-- You can replace this with an actual icon image or use Font Awesome -->
+                        <img src="quantumAssets\icons\preview.svg" alt="Show" class="eye-icon" id="togglePassword" />
+                    </div>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+
+
+                <div class="custom-checkbox">
+                    <label>
+                        <input type="checkbox" />
+                        <img src="./quantumAssets/icons/checkbox-unchecked.svg" class="checkbox-icon unchecked" />
+                        <img src="./quantumAssets/icons/checkbox-checked.svg" class="checkbox-icon checked" />
+                        <span>Remember Me</span>
+                    </label>
+                </div>
+                <div class="main-submit">
+
+                    <input type="submit" class="submit" value="LOG IN">
+                </div>
+
+            </form>
+
+
+
+            <div>
+
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div>About | Contact Us</div>
+        <div>
+            <div class="login-footer-logo">
+
+            </div>
+            &nbsp; | &nbsp;
+            <div>
+                Copyright &copy; 2020-2021 Zeus System Pvt. Ltd. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

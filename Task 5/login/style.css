@@ -1,0 +1,381 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Quicksand;
+        }
+
+
+        html,
+        body {
+            /* font-family: Quicksand; */
+            height: 100%;
+        }
+
+        body {
+            background: #EEEEEE;
+            font-family: sans-serif;
+        }
+
+        .wrapper {
+            min-height: 100%;
+            padding-bottom: 74px;
+            position: relative;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 56px;
+            width: 100%;
+            background-color: #1f2935;
+            z-index: 1000;
+            background-image: url('./quantumAssets/header\ pattern\ svg.svg');
+            border-bottom: 2px solid #31B9E4;
+        }
+
+        .login-header-logo {
+            background-image: url('./quantumAssets/icons/logoUsedInHeader.svg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 134px;
+            height: 36px;
+            margin: 10px 0 0 24px;
+        }
+
+        .login-footer-logo {
+            background-image: url('./quantumAssets/icons/logo\ used\ in\ footer.svg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 90px;
+            height: 24px;
+        }
+
+        a {
+            text-transform: uppercase;
+            font: normal normal medium 14px/18px Quicksand;
+            letter-spacing: 0px;
+            color: #299668;
+            font-weight: 600;
+            opacity: 1;
+        }
+
+        main {
+            height: 550px;
+            width: 488px;
+            margin: 120px auto 0;
+            /* leave space for fixed header */
+            background: #FFFFFF;
+            padding: 20px;
+            /* color: white; */
+            border-top: 4px solid #3AC7EC;
+        }
+
+        footer {
+            height: 74px;
+            /* background: #E0E1E1; */
+            color: white;
+            text-align: center;
+            position: relative;
+            margin-top: -74px;
+            /* pull footer up into reserved space */
+            clear: both;
+        }
+
+        footer>div {
+            height: 37px;
+            line-height: 37px;
+            /* background-color: yellow; */
+        }
+
+        footer>div:last-child {
+            background-color: #E0E1E1;
+            line-height: 37px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer>div:last-child>div:last-child {
+            font: normal normal bold 12px/16px Quicksand;
+            color: #878888;
+        }
+
+        footer>div:first-child {
+            text-align: center;
+            font: normal normal medium 14px/18px Quicksand;
+            letter-spacing: 0px;
+            color: #2A805C;
+            opacity: 1;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        img {
+            color: black;
+        }
+
+        main>div:first-child {
+            /* background-color: yellow; */
+            display: flex;
+            align-items: center;
+            /* vertical center */
+            justify-content: center;
+            /* center horizontally */
+            position: relative;
+        }
+
+        main>div:first-child>div:first-child {
+            background-image: url("quantumAssets/icons/back.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 26px;
+            width: 24px;
+
+            position: absolute;
+            left: 0;
+        }
+
+        .main-radio-group {
+            /* make sure radios and labels are inline */
+            display: flex;
+            gap: 10px;
+            /* 10px space between pairs */
+            align-items: center;
+        }
+
+
+
+        /* Custom radio look */
+
+
+        /* The outer circle */
+
+
+        .main-radio-group input[type="radio"]:checked+label::after {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: calc(50% + 1px);
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: green;
+            border-radius: 50%;
+        }
+
+        select {
+            width: 100%;
+            /* padding: 8px; */
+            font-size: 14px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .select-state label,
+        .select-district label {
+
+            display: block;
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 6px;
+
+
+        }
+
+        select>option {}
+
+
+        form {
+            /* background-color: green; */
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            height: 94%;
+            justify-content: space-around;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+        }
+
+        .forgot-username {
+            margin-top: 6px;
+            display: block;
+            font-size: 12px;
+            /* color: #007bff; */
+            text-decoration: none;
+            text-align: right;
+        }
+
+        .forgot-username:hover {
+            text-decoration: underline;
+        }
+
+
+
+        input[type="password"],
+        input[type="text"] {
+            width: 100%;
+            padding: 8px 32px 8px 8px;
+            /* right padding for the icon */
+            font-size: 14px;
+            border: 1px solid #ccc;
+            /* border-radius: 4px; */
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        input[type="password"],
+        input[type="text"] {
+            outline: none;
+        }
+
+        .eye-icon {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            opacity: 0.6;
+        }
+
+        .eye-icon:hover {
+            opacity: 1;
+        }
+
+        .password-wrapper {
+            position: relative;
+        }
+
+        .forgot-password {
+            margin-top: 6px;
+            display: block;
+            font-size: 12px;
+            /* color: #007bff; */
+            text-decoration: none;
+            text-align: right;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .radio-option input[type="radio"] {
+            display: none;
+            /* hide the default radio */
+        }
+
+        /* Show only the "off" icon by default */
+        .radio-icon.on {
+            display: none;
+        }
+
+        /* When radio is checked, hide "off" and show "on" icon */
+        .radio-option input[type="radio"]:checked~.off {
+            display: none;
+        }
+
+        .radio-option input[type="radio"]:checked~.on {
+            display: inline;
+        }
+
+        select {
+            appearance: none;
+            /* removes default arrow in most browsers */
+            -webkit-appearance: none;
+            /* Safari */
+            -moz-appearance: none;
+            /* Firefox */
+            cursor: pointer;
+            width: 100%;
+            padding: 8px 40px 8px 0px;
+            /* space on right for arrow */
+            font-size: 14px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+
+            background-image: url('./quantumAssets/icons/arrow-down.svg');
+            /* replace with your arrow image */
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px 16px;
+            font-weight: bold;
+        }
+
+        select:focus {
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #1f2935;
+        }
+
+        .custom-checkbox label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .custom-checkbox input[type="checkbox"] {
+            display: none;
+            /* hide native checkbox */
+        }
+
+        .checkbox-icon.checked {
+            display: none;
+            /* hide checked icon by default */
+        }
+
+        .custom-checkbox input[type="checkbox"]:checked~.unchecked {
+            display: none;
+            /* hide unchecked icon when checked */
+        }
+
+        .custom-checkbox input[type="checkbox"]:checked~.checked {
+            display: inline;
+            /* show checked icon */
+        }
+
+        .main-submit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: green; */
+        }
+
+        input[type="submit"] {
+            font-size: 14px;
+            height: 40px;
+            width: 215px;
+            background-color: #3FD28B;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+            cursor: pointer;
+        }
+ 

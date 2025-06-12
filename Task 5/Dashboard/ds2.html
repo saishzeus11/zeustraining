@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Permanent+Marker&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+   
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo"></div>
+
+
+        <div class="nav-icons">
+            <div class="nav-links" id="navLinks">
+                <a href="#" class="default-selected-text">Dashboard
+                    <div class="line default-selected-line"></div>
+                </a>
+
+                <a href="#">Content <div class="line"></div></a>
+                <a href="#">Users <div class="line"></div></a>
+                <a href="#">Report <div class="line"></div></a>
+                <a href="#">Admin <div class="line"></div></a>
+
+            </div>
+            <div class="icons">
+                <!-- <div class="alert-icon">
+                    <div class="notification">2</div>
+                </div> -->
+                <div class="alert-icon">
+                    <div class="notification" id="alertCounts"></div>
+                    <div id="alertPanel" class="alert-panel">
+                        <div class="alert-list">
+                            <!-- Alert items will be dynamically inserted here -->
+                        </div>
+                        <div class="alert-actions">
+                            <!-- Alert buttons will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="announcements-icon">
+                    <div class="notification" id="announcemntCounts"></div>
+                    <!-- Add after .announcements-icon -->
+                    <div id="announcementPanel" class="announcement-panel">
+                        <div class="announcement-list">
+                            <!-- Announcement items will be dynamically inserted here -->
+                        </div>
+                        <div class="announcement-actions">
+                            <!-- Announcement buttons will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-icon">
+                    <div class="notification" style="background-color: white;color: #222222;">T</div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+        </div>
+
+
+        <div class="hamburger" onclick="toggleMenu()"></div>
+        <div id="dropdownMenu" class="dropdown-menu">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li>
+                    <a href="#" class="expand" onclick="toggleSubMenu(event, 'dropdownContentSub')">Content <span
+                            class="arrow">&#9662;</span></a>
+                    <ul class="submenu" id="dropdownContentSub">
+                        <li><a href="#">Course Catalog</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="expand" onclick="toggleSubMenu(event, 'dropdownUsersSub')">Users <span
+                            class="arrow">&#9662;</span></a>
+                    <ul class="submenu" id="dropdownUsersSub">
+                        <li><a href="#">User List</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="expand" onclick="toggleSubMenu(event, 'dropdownReportsSub')">Reports <span
+                            class="arrow">&#9662;</span></a>
+                    <ul class="submenu" id="dropdownReportsSub">
+                        <li><a href="#">Report 1</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="expand" onclick="toggleSubMenu(event, 'dropdownAdminSub')">Admin <span
+                            class="arrow">&#9662;</span></a>
+                    <ul class="submenu" id="dropdownAdminSub">
+                        <li><a href="#">Admin Panel</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="main-section">
+            <div class="section section-left">
+                <a href="#left" tabindex="1">
+                    <img src="./assets/quantum screen assets/icons/courses.svg" alt="">
+                    <b>4</b><span>Courses</span>
+                </a>
+                <div class="section-line default-selected-section"></div> <!-- Selected by default -->
+            </div>
+
+            <div class="section section-right">
+                <a href="#right" tabindex="2">
+                    <img src="./assets/quantum screen assets/icons/classes.svg" alt="">
+                    <b>4</b><span>Classes</span>
+                </a>
+                <div class="section-line"></div> <!-- Not selected initially -->
+            </div>
+        </div>
+
+        <div class="main-section-2">
+            <div>
+                Showing 4 of 4 courses
+            </div>
+
+            <div class="container">
+                <div class="left-div">
+                    <label for="sort">Sort By:</label>
+                    <div class="custom-select">
+                        <select id="sort">
+                            <option value="latest">Course Name</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="oldest">Oldest</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="right-div">
+                    <img src="assets/quantum screen assets/icons/sort.svg" alt="Random Image">
+                </div>
+            </div>
+        </div>
+
+        <div class="main-section-3" id="cards-container"></div>
+
+        <!-- <div class="main-section-3">
+            <div class=" card card1">
+                <div class="item1">
+                    <div class="item1-img">
+
+                    </div>
+                </div>
+                <div class="item2">
+                    <div class="item2-1">
+                        <div>Acceleration</div>
+                        <div class="item2-1-img"></div>
+                    </div>
+                    <div class="item2-2">
+                        <p>Physics | Grade 7 <span class="inc">+2</span></p>
+                    </div>
+                    <div class="item2-3">
+                        <p><b>4</b> Units <b>18 </b> Lessons <b>24</b> Topics</p>
+                    </div>
+                    <div class="item2-4">
+
+                        <div class="custom-select">
+                            <select id="sort">
+                                <option value="latest">Mr. Frank's Class B</option>
+                                <option value="popular">Most Popular</option>
+                                <option value="oldest">Oldest</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="item2-5">
+                        <p>50 Students | 24-Jan-2020 - 21-Aug-2020 </p>
+                    </div>
+                    <div class="item2-6">
+
+                    </div>
+
+                </div>
+                <div class="item3 ">
+                    <div class="item3-eye item3-img ">
+
+                    </div>
+                    <div class="item3-course item3-img">
+
+                    </div>
+                    <div class="item3-grade item3-img">
+
+                    </div>
+                    <div class="item3-report item3-img">
+
+                    </div>
+                </div>
+            </div>
+            <div class="card card2">
+                <div class="item1">
+                    <div class="item1-img">
+
+                    </div>
+                </div>
+                <div class="item2">
+                    <div class="item2-1">
+                        <div>Displacement, Velocity and Speed</div>
+                        <div class="item2-1-img "></div>
+                    </div>
+                    <div class="item2-2">
+                        <p>Physics 2 | Grade 6 <span class="inc">+3</span></p>
+                    </div>
+                    <div class="item2-3">
+                        <p><b>2</b> Units <b>15 </b> Lessons <b>20</b> Topics</p>
+                    </div>
+                    <div class="item2-4">
+
+                        <div class="custom-select">
+                            <select id="sort" style="color: #666666;">
+                                <option value="latest">No Classes</option>
+                                <option value="popular">Most Popular</option>
+                                <option value="oldest">Oldest</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="item2-5">
+                        <p> </p>
+                    </div>
+                    <div class="item2-6">
+
+                    </div>
+
+                </div>
+                <div class="item3 ">
+                    <div class="item3-eye item3-img">
+
+                    </div>
+                    <div class="item3-course item3-img clicked">
+
+                    </div>
+                    <div class="item3-grade item3-img clicked">
+
+                    </div>
+                    <div class="item3-report item3-img">
+
+                    </div>
+                </div>
+            </div>
+            <div class="card card3">
+                <div class="item1">
+                    <div class="item1-img">
+
+                    </div>
+                </div>
+                <div class="item2">
+                    <div class="item2-1">
+                        <div>Introduction to Biology: Micro organisms and how they affec...</div>
+                        <div class="item2-1-img"></div>
+                    </div>
+                    <div class="item2-2">
+                        <p>Biology | Grade 4 <span class="inc">+1</span></p>
+                    </div>
+                    <div class="item2-3">
+                        <p><b>5</b> Units <b>16</b> Lessons <b>22</b> Topics</p>
+                    </div>
+                    <div class="item2-4">
+
+                        <div class="custom-select">
+                            <select id="sort">
+                                <option value="latest">All Classes</option>
+                                <option value="popular">Most Popular</option>
+                                <option value="oldest">Oldest</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="item2-5">
+                        <p>300 Students </p>
+                    </div>
+                    <div class="item2-6">
+
+                    </div>
+
+                </div>
+                <div class="item3 ">
+                    <div class="item3-eye item3-img">
+
+                    </div>
+                    <div class="item3-course item3-img clicked">
+
+                    </div>
+                    <div class="item3-grade item3-img clicked">
+
+                    </div>
+                    <div class="item3-report item3-img">
+
+                    </div>
+                </div>
+            </div>
+            <div class="card card4">
+                <div class="item1">
+                    <div class="item1-img">
+
+                    </div>
+                </div>
+                <div class="item2">
+                    <div class="item2-1">
+                        <div>Introduction to HIgh School Mathematics</div>
+                        <div class="item2-1-img star-select"></div>
+                    </div>
+                    <div class="item2-2">
+                        <p>Mathematics | Grade 8 <span class="inc">+3</span></p>
+                    </div>
+                    <div class="item2-3">
+                        <p><b>4</b> Units <b>18 </b> Lessons <b>24</b> Topics</p>
+                    </div>
+                    <div class="item2-4">
+
+                        <div class="custom-select">
+                            <select id="sort">
+                                <option value="latest">Mr. Frank's Class A</option>
+                                <option value="popular">Most Popular</option>
+                                <option value="oldest">Oldest</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="item2-5">
+                        <p>44 Students | 14-Oct-2019 - 20-Aug-2020 </p>
+                    </div>
+                    <div class="item2-6">
+
+                    </div>
+
+                </div>
+                <div class="item3 ">
+                    <div class="item3-eye item3-img">
+
+                    </div>
+                    <div class="item3-course item3-img">
+
+                    </div>
+                    <div class="item3-grade item3-img">
+
+                    </div>
+                    <div class="item3-report item3-img">
+
+                    </div>
+                </div>
+            </div>
+
+        </div> -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-1">
+            About | Contact
+        </div>
+        <div class="footer-2">
+            <div class="footer-2-logo">
+
+            </div>
+            |
+            <div class="footer-2-text">
+                Copyright &copy; 2020-2021 <b>Zeus System Pvt. Ltd.</b> All rights reserved.
+            </div>
+
+        </div>
+    </footer>
+    <script>  async function loadCards() {
+            const response = await fetch('cards.json');
+            const cards = await response.json();
+
+            const container = document.getElementById('cards-container');
+            container.innerHTML = '';
+
+            cards.forEach(card => {
+                const cardDiv = document.createElement('div');
+                cardDiv.className = `card ${card.cardClass}`;
+
+                cardDiv.innerHTML = `
+          <div class="item1">
+            <div class="item1-img"></div>
+          </div>
+          <div class="item2">
+            <div class="item2-1">
+              <div>${card.title}</div>
+              <div class="item2-1-img ${card.starSelect ? 'star-select' : ''}"></div>
+            </div>
+            <div class="item2-2">
+              <p>${card.subject} | Grade ${card.grade} <span class="inc">+${card.increment}</span></p>
+            </div>
+            <div class="item2-3">
+              <p><b>${card.units}</b> Units <b>${card.lessons}</b> Lessons <b>${card.topics}</b> Topics</p>
+            </div>
+            <div class="item2-4">
+              <div class="custom-select">
+                <select>
+                  ${card.selectOptions.map(option => `<option value="${option.toLowerCase().replace(/\s/g, '')}">${option}</option>`).join('')}
+                </select>
+              </div>
+            </div>
+            <div class="item2-5">
+              <p>${card.studentsInfo}</p>
+            </div>
+            <div class="item2-6"></div>
+          </div>
+          <div class="item3">
+            <div class="item3-eye item3-img ${card.clicked.includes('eye') ? 'clicked' : ''}"></div>
+            <div class="item3-course item3-img ${card.clicked.includes('course') ? 'clicked' : ''}"></div>
+            <div class="item3-grade item3-img ${card.clicked.includes('grade') ? 'clicked' : ''}"></div>
+            <div class="item3-report item3-img ${card.clicked.includes('report') ? 'clicked' : ''}"></div>
+          </div>
+        `;
+
+                container.appendChild(cardDiv);
+            });
+
+            document.querySelectorAll('.item2-1-img').forEach(img => {
+                img.addEventListener('click', function () {
+                    this.classList.toggle('star-select');
+                });
+            });
+            document.querySelectorAll('.item3-img').forEach(img => {
+                img.addEventListener('click', function () {
+                    this.classList.toggle('clicked');
+                });
+            });
+        }
+
+        loadCards();</script>
+    <script>
+        function toggleMenu() {
+            // const navLinks = document.getElementById('navLinks');
+            // navLinks.classList.toggle('active');
+        }
+    </script>
+    <script>
+        // document.querySelectorAll('.item3-img').forEach(img => {
+        //     img.addEventListener('click', function () {
+        //         this.classList.toggle('clicked');
+        //     });
+        // });
+    </script>
+
+
+
+    <script>
+        // document.querySelectorAll('.item2-1-img').forEach(img => {
+        //     img.addEventListener('click', function () {
+        //         this.classList.toggle('star-select');
+        //     });
+        // });
+
+        const navLinks = document.querySelectorAll(".nav-links a");
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                // Remove classes from all links
+                navLinks.forEach(l => {
+                    l.classList.remove("selected-link");
+                    l.querySelector(".line").classList.remove("default-selected-line");
+                    l.classList.remove("default-selected-text");
+                });
+
+                // Add classes to clicked link
+                link.classList.add("selected-link");
+                link.querySelector(".line").classList.add("default-selected-line");
+                link.classList.add("default-selected-text");
+            });
+        });
+
+
+        const sections = document.querySelectorAll(".section");
+
+        sections.forEach(section => {
+            section.querySelector("a").addEventListener("click", (e) => {
+                e.preventDefault(); // optional, if you want to stop jump
+
+                // Remove the class from all section lines
+                sections.forEach(s => {
+                    s.querySelector(".section-line").classList.remove("default-selected-section");
+                });
+
+                // Add the class to the clicked section's line
+                section.querySelector(".section-line").classList.add("default-selected-section");
+            });
+        });
+
+    </script>
+    <script>
+        // Dropdown menu toggle
+        document.querySelector('.hamburger').onclick = function (e) {
+            e.stopPropagation();
+            document.getElementById('dropdownMenu').classList.toggle('active');
+        };
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function (e) {
+            var menu = document.getElementById('dropdownMenu');
+            if (menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            }
+        });
+
+        // Prevent dropdown from closing when clicking inside
+        document.getElementById('dropdownMenu').onclick = function (e) {
+            e.stopPropagation();
+        };
+
+        // Submenu toggle (reuse your function, but works for dropdown)
+        function toggleSubMenu(e, id) {
+            e.preventDefault();
+            var submenu = document.getElementById(id);
+            submenu.classList.toggle('active');
+            var link = e.currentTarget;
+            link.classList.toggle('open');
+        }
+    </script>
+    <script>
+        // ...existing code...
+        document.querySelector('.announcements-icon').onclick = function (e) {
+            e.stopPropagation();
+            document.getElementById('announcementPanel').classList.toggle('active');
+        };
+
+        // Close panel when clicking outside
+        document.addEventListener('click', function (e) {
+            var panel = document.getElementById('announcementPanel');
+            if (panel.classList.contains('active')) {
+                panel.classList.remove('active');
+            }
+        });
+
+        // Prevent panel from closing when clicking inside
+        document.getElementById('announcementPanel').onclick = function (e) {
+            e.stopPropagation();
+        };
+        // ...existing code...
+
+        // ...existing code...
+        function countAnnouncementCheckboxes() {
+            const checkboxes = document.querySelectorAll('#announcementPanel .custom-checkbox input[type="checkbox"]');
+            let ticked = 0, unticked = 0;
+            checkboxes.forEach(cb => {
+                if (cb.checked) ticked++;
+                else unticked++;
+            });
+            return { ticked, unticked };
+        }
+
+        // Function to update the div with the new number
+        function updateAnnouncemnt() {
+            const announcemntCounts = document.getElementById('announcemntCounts');
+            announcemntCounts.innerText = countAnnouncementCheckboxes().ticked;;
+        }
+        setInterval(updateAnnouncemnt, 1000);
+
+        // Example usage:
+        // const counts = countAnnouncementCheckboxes();
+        // console.log('Ticked:', counts.ticked, 'Unticked:', counts.unticked);
+        // ...existing code...
+    </script>
+
+    <script>
+        // ...existing code...
+        document.querySelector('.alert-icon').onclick = function (e) {
+            e.stopPropagation();
+            document.getElementById('alertPanel').classList.toggle('active');
+        };
+
+        // Close alert panel when clicking outside
+        document.addEventListener('click', function (e) {
+            var panel = document.getElementById('alertPanel');
+            if (panel && panel.classList.contains('active')) {
+                panel.classList.remove('active');
+            }
+        });
+
+        // Prevent alert panel from closing when clicking inside
+        document.getElementById('alertPanel').onclick = function (e) {
+            e.stopPropagation();
+        };
+
+        // Count checked/unchecked checkboxes in alert panel
+        function countAlertCheckboxes() {
+            const checkboxes = document.querySelectorAll('#alertPanel .custom-checkbox input[type="checkbox"]');
+            let ticked = 0, unticked = 0;
+            checkboxes.forEach(cb => {
+                if (cb.checked) ticked++;
+                else unticked++;
+            });
+            return { ticked, unticked };
+        }
+
+        // Update alert count badge
+        function updateAlertCount() {
+            const alertCounts = document.getElementById('alertCounts');
+            alertCounts.innerText = countAlertCheckboxes().ticked;
+        }
+        setInterval(updateAlertCount, 1000);
+        // ...existing code...
+    </script>
+    <script>
+        function setupHoverPanel(iconSelector, panelSelector, activeClass = 'active') {
+            const icon = document.querySelector(iconSelector);
+            const panel = document.querySelector(panelSelector);
+            let hover = false;
+
+            function showPanel() {
+                panel.classList.add(activeClass);
+            }
+            function hidePanel() {
+                panel.classList.remove(activeClass);
+            }
+
+            icon.addEventListener('mouseenter', showPanel);
+            icon.addEventListener('mouseleave', () => {
+                setTimeout(() => {
+                    if (!hover) hidePanel();
+                }, 50);
+            });
+
+            panel.addEventListener('mouseenter', () => {
+                hover = true;
+                showPanel();
+            });
+            panel.addEventListener('mouseleave', () => {
+                hover = false;
+                hidePanel();
+            });
+        }
+        setupHoverPanel('.alert-icon', '#alertPanel');
+        setupHoverPanel('.announcements-icon', '#announcementPanel');
+        setupHoverPanel('.hamburger', '#dropdownMenu', 'active');
+    </script>
+    <script>
+        async function loadAlertData() {
+            const response = await fetch('alertData.json');
+            const data = await response.json();
+
+            const alertList = document.querySelector('#alertPanel .alert-list');
+            const alertActions = document.querySelector('#alertPanel .alert-actions');
+            const alertCounts = document.getElementById('alertCounts');
+
+            alertList.innerHTML = '';
+            alertActions.innerHTML = '';
+
+            data.alerts.forEach(alert => {
+                const alertItem = document.createElement('div');
+                alertItem.className = 'alert-item';
+
+                alertItem.innerHTML = `
+                    <div class="alert-info">
+                        <div class="alert-title">${alert.title}</div>
+                        <div class="alert-desc">${alert.desc}</div>
+                        <div class="alert-meta">${alert.meta}</div>
+                    </div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" ${alert.checked ? 'checked' : ''} />
+                        <span></span>
+                    </label>
+                `;
+
+                alertList.appendChild(alertItem);
+            });
+
+            data.buttons.forEach(button => {
+                const btn = document.createElement('button');
+                btn.className = button.class;
+                btn.textContent = button.label;
+                alertActions.appendChild(btn);
+            });
+
+            // Update alert count badge
+            function updateAlertCount() {
+                const checkboxes = alertList.querySelectorAll('input[type="checkbox"]');
+                let ticked = 0;
+                checkboxes.forEach(cb => {
+                    if (cb.checked) ticked++;
+                });
+                alertCounts.innerText = ticked;
+            }
+            updateAlertCount();
+
+            alertList.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                cb.addEventListener('change', updateAlertCount);
+            });
+        }
+
+        async function loadAnnouncementData() {
+            const response = await fetch('announcementData.json');
+            const data = await response.json();
+
+            const announcementList = document.querySelector('#announcementPanel .announcement-list');
+            const announcementActions = document.querySelector('#announcementPanel .announcement-actions');
+            const announcemntCounts = document.getElementById('announcemntCounts');
+
+            announcementList.innerHTML = '';
+            announcementActions.innerHTML = '';
+
+            data.announcements.forEach(announcement => {
+                const announcementItem = document.createElement('div');
+                announcementItem.className = 'announcement-item';
+
+                announcementItem.innerHTML = `
+                    <div class="announcement-info">
+                        <div class="announcement-title">${announcement.title}</div>
+                        <div class="announcement-desc">${announcement.desc}</div>
+                        <div class="announcement-meta">${announcement.meta}</div>
+                    </div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" ${announcement.checked ? 'checked' : ''} />
+                        <span></span>
+                    </label>
+                `;
+
+                announcementList.appendChild(announcementItem);
+            });
+
+            data.buttons.forEach(button => {
+                const btn = document.createElement('button');
+                btn.className = button.class;
+                btn.textContent = button.label;
+                announcementActions.appendChild(btn);
+            });
+
+            // Update announcement count badge
+            function updateAnnouncementCount() {
+                const checkboxes = announcementList.querySelectorAll('input[type="checkbox"]');
+                let ticked = 0;
+                checkboxes.forEach(cb => {
+                    if (cb.checked) ticked++;
+                });
+                announcemntCounts.innerText = ticked;
+            }
+            updateAnnouncementCount();
+
+            announcementList.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                cb.addEventListener('change', updateAnnouncementCount);
+            });
+        }
+
+        // Load data on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            loadAlertData();
+            loadAnnouncementData();
+        });
+    </script>
+</body>
+
+</html>

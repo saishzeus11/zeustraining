@@ -1,0 +1,68 @@
+  * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            background-color: #990000;
+            color: #ffffd2;
+            text-align: center;
+            font-style: italic;
+            padding: 2px;
+            border-bottom: 10px solid #cc0000;
+            letter-spacing: 4pt;
+        }
+
+        h3 {
+            background-color: #009900;
+            color: white;
+            padding: 5px;
+            padding-left: 10px;
+        }
+
+        ul {
+            color: #c7735c;
+        }
+
+        h4 {
+            color: #cccccc;
+            ;
+        }
+
+        table {
+            background-color: #cccccc;
+
+        }
+
+        textarea {
+            height: 150px;
+            width: 200px;
+            overflow-y: scroll;
+        }
+
+        #name {
+            width: 200px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        table+h4+p>i {
+            font-weight: bolder;
+        }
+
+  input[type="radio"] {
+        /* Remove default radio style */
+ /* For Safari */
+  
+  border: 2px solid #333;   /* The border you want */
+  border-radius: 50%;       /* Circle shape */
+  cursor: pointer;
+  position: relative;
+}
+
+
+input[type="radio"]:focus {
+  border-color: green; 
+  box-shadow: 0 0 4px rgb(255, 0, 34);
+} 
