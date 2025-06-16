@@ -1,0 +1,50 @@
+{
+  "announcements": [
+    {
+      "title": "PA: Wilson Kumar",
+      "desc": "No classes will be held on 21st Nov",
+      "meta": "2 files are attached | 15-Sep-2018 at 07:21 pm",
+      "checked": true
+    },
+    {
+      "title": "PA: Wilson Kumar",
+      "desc": "No classes will be held on 21st Nov",
+      "meta": "2 files are attached | 15-Sep-2018 at 07:21 pm",
+      "checked": false
+    },
+    {
+      "title": "PA: Wilson Kumar",
+      "desc": "No classes will be held on 21st Nov",
+      "meta": "2 files are attached | 15-Sep-2018 at 07:21 pm",
+      "checked": false
+    },
+    {
+      "title": "PA: Wilson Kumar",
+      "desc": "No classes will be held on 21st Nov",
+      "meta": "2 files are attached | 15-Sep-2018 at 07:21 pm",
+      "checked": false
+    },
+    {
+      "title": "PA: Wilson Kumar",
+      "desc": "No classes will be held on 21st Nov",
+      "meta": "2 files are attached | 15-Sep-2018 at 07:21 pm",
+      "checked": false
+    },
+    {
+      "title": "PA: Wilson Kumar",
+      "desc": "No classes will be held on 21st Nov",
+      "meta": "2 files are attached | 15-Sep-2018 at 07:21 pm",
+      "checked": false
+    }
+  ],
+  "buttons": [
+    {
+      "label": "SHOW ALL",
+      "class": "show-all-btn"
+    },
+    {
+      "label": "CREATE NEW",
+      "class": "create-new-btn"
+    }
+  ]
+}

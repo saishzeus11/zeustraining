@@ -2,11 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Permanent+Marker&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+   <style>
+            * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -426,13 +431,22 @@
             /* background-color: green; */
             width: 100%;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(372px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             grid-auto-rows: 250px;
             gap: 12px;
         }
 
         /* Responsive */
         @media (max-width: 960px) {
+            .main-section-3 {
+                /* background-color: green; */
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(372px, 1fr));
+                grid-auto-rows: 250px;
+                gap: 12px;
+            }
+
             .icons {
                 width: 60%;
             }
@@ -837,15 +851,8 @@
             overflow: hidden;
         }
 
-        /* Show announcement panel on hover of announcements-icon or announcement-panel */
-        .announcements-icon:hover #announcementPanel,
-        #announcementPanel:hover {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-            pointer-events: auto;
-        }
 
-        #announcementPanel.active {
+        .announcement-panel.active {
             opacity: 1;
             transform: scale(1) translateY(0);
             pointer-events: auto;
@@ -865,6 +872,10 @@
             border-bottom: 1px solid #f0f0f0;
             gap: 12px;
         }
+        .announcement-item.unchecked {
+            background-color: #d0f0d0 !important; /* light green background for unchecked */
+        }
+       
 
         .announcement-info {
             flex: 1;
@@ -999,15 +1010,7 @@
             overflow: hidden;
         }
 
-        /* Show alert panel on hover of alert-icon or alert-panel */
-        .alert-icon:hover #alertPanel,
-        #alertPanel:hover {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-            pointer-events: auto;
-        }
-
-        #alertPanel.active {
+        .alert-panel.active {
             opacity: 1;
             transform: scale(1) translateY(0);
             pointer-events: auto;
@@ -1027,6 +1030,10 @@
             border-bottom: 1px solid #f0f0f0;
             gap: 12px;
         }
+        .alert-item.unchecked {
+            background-color: #d0f0d0 !important; /* light green background for unchecked */
+        }
+        
 
         .alert-info {
             flex: 1;
@@ -1057,7 +1064,9 @@
             background: #f9f9f9;
             border-top: 1px solid #eee;
         }
-    </style>
+
+   </style>
+
 </head>
 
 <body>
@@ -1087,32 +1096,10 @@
                     <div class="notification" id="alertCounts"></div>
                     <div id="alertPanel" class="alert-panel">
                         <div class="alert-list">
-                            <div class="alert-item">
-                                <div class="alert-info">
-                                    <div class="alert-title">System Update</div>
-                                    <div class="alert-desc">System maintenance scheduled for 22nd Nov</div>
-                                    <div class="alert-meta">15-Sep-2018 at 07:21 pm</div>
-                                </div>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" />
-                                    <span></span>
-                                </label>
-                            </div>
-                            <div class="alert-item">
-                                <div class="alert-info">
-                                    <div class="alert-title">New Feature</div>
-                                    <div class="alert-desc">New dashboard feature released</div>
-                                    <div class="alert-meta">14-Sep-2018 at 10:00 am</div>
-                                </div>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" />
-                                    <span></span>
-                                </label>
-                            </div>
+                            <!-- Alert items will be dynamically inserted here -->
                         </div>
                         <div class="alert-actions">
-                            <button class="show-all-btn">SHOW ALL</button>
-
+                            <!-- Alert buttons will be dynamically inserted here -->
                         </div>
                     </div>
                 </div>
@@ -1121,84 +1108,10 @@
                     <!-- Add after .announcements-icon -->
                     <div id="announcementPanel" class="announcement-panel">
                         <div class="announcement-list">
-                            <div class="announcement-item">
-                                <div class="announcement-info">
-                                    <div class="announcement-title">PA: Wilson Kumar</div>
-                                    <div class="announcement-desc">No classes will be held on 21st Nov</div>
-                                    <div class="announcement-meta">2 files are attached &nbsp;|&nbsp; 15-Sep-2018 at
-                                        07:21 pm</div>
-                                </div>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" />
-                                    <span></span>
-                                </label>
-                            </div>
-                            <!-- Example for one item -->
-                            <div class="announcement-item">
-                                <div class="announcement-info">
-                                    <div class="announcement-title">PA: Wilson Kumar</div>
-                                    <div class="announcement-desc">No classes will be held on 21st Nov</div>
-                                    <div class="announcement-meta">2 files are attached &nbsp;|&nbsp; 15-Sep-2018 at
-                                        07:21 pm</div>
-                                </div>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" />
-                                    <span></span>
-                                </label>
-                            </div>
-                            <div class="announcement-item">
-                                <div class="announcement-info">
-                                    <div class="announcement-title">PA: Wilson Kumar</div>
-                                    <div class="announcement-desc">No classes will be held on 21st Nov</div>
-                                    <div class="announcement-meta">2 files are attached &nbsp;|&nbsp; 15-Sep-2018 at
-                                        07:21 pm</div>
-                                </div>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" />
-                                    <span></span>
-                                </label>
-                            </div>
-                            <div class="announcement-item">
-                                <div class="announcement-info">
-                                    <div class="announcement-title">PA: Wilson Kumar</div>
-                                    <div class="announcement-desc">No classes will be held on 21st Nov</div>
-                                    <div class="announcement-meta">2 files are attached &nbsp;|&nbsp; 15-Sep-2018 at
-                                        07:21 pm</div>
-                                </div>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" />
-                                    <span></span>
-                                </label>
-                            </div>
-                            <div class="announcement-item">
-                                <div class="announcement-info">
-                                    <div class="announcement-title">PA: Wilson Kumar</div>
-                                    <div class="announcement-desc">No classes will be held on 21st Nov</div>
-                                    <div class="announcement-meta">2 files are attached &nbsp;|&nbsp; 15-Sep-2018 at
-                                        07:21 pm</div>
-                                </div>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" />
-                                    <span></span>
-                                </label>
-                            </div>
-                            <div class="announcement-item">
-                                <div class="announcement-info">
-                                    <div class="announcement-title">PA: Wilson Kumar</div>
-                                    <div class="announcement-desc">No classes will be held on 21st Nov</div>
-                                    <div class="announcement-meta">2 files are attached &nbsp;|&nbsp; 15-Sep-2018 at
-                                        07:21 pm</div>
-                                </div>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" />
-                                    <span></span>
-                                </label>
-                            </div>
-
+                            <!-- Announcement items will be dynamically inserted here -->
                         </div>
                         <div class="announcement-actions">
-                            <button class="show-all-btn">SHOW ALL</button>
-                            <button class="create-new-btn">CREATE NEW</button>
+                            <!-- Announcement buttons will be dynamically inserted here -->
                         </div>
                     </div>
                 </div>
@@ -1527,273 +1440,7 @@
 
         </div>
     </footer>
-    <script>  async function loadCards() {
-            const response = await fetch('cards.json');
-            const cards = await response.json();
-
-            const container = document.getElementById('cards-container');
-            container.innerHTML = '';
-
-            cards.forEach(card => {
-                const cardDiv = document.createElement('div');
-                cardDiv.className = `card ${card.cardClass}`;
-
-                cardDiv.innerHTML = `
-          <div class="item1">
-            <div class="item1-img"></div>
-          </div>
-          <div class="item2">
-            <div class="item2-1">
-              <div>${card.title}</div>
-              <div class="item2-1-img ${card.starSelect ? 'star-select' : ''}"></div>
-            </div>
-            <div class="item2-2">
-              <p>${card.subject} | Grade ${card.grade} <span class="inc">+${card.increment}</span></p>
-            </div>
-            <div class="item2-3">
-              <p><b>${card.units}</b> Units <b>${card.lessons}</b> Lessons <b>${card.topics}</b> Topics</p>
-            </div>
-            <div class="item2-4">
-              <div class="custom-select">
-                <select>
-                  ${card.selectOptions.map(option => `<option value="${option.toLowerCase().replace(/\s/g, '')}">${option}</option>`).join('')}
-                </select>
-              </div>
-            </div>
-            <div class="item2-5">
-              <p>${card.studentsInfo}</p>
-            </div>
-            <div class="item2-6"></div>
-          </div>
-          <div class="item3">
-            <div class="item3-eye item3-img ${card.clicked.includes('eye') ? 'clicked' : ''}"></div>
-            <div class="item3-course item3-img ${card.clicked.includes('course') ? 'clicked' : ''}"></div>
-            <div class="item3-grade item3-img ${card.clicked.includes('grade') ? 'clicked' : ''}"></div>
-            <div class="item3-report item3-img ${card.clicked.includes('report') ? 'clicked' : ''}"></div>
-          </div>
-        `;
-
-                container.appendChild(cardDiv);
-            });
-
-            document.querySelectorAll('.item2-1-img').forEach(img => {
-                img.addEventListener('click', function () {
-                    this.classList.toggle('star-select');
-                });
-            });
-            document.querySelectorAll('.item3-img').forEach(img => {
-                img.addEventListener('click', function () {
-                    this.classList.toggle('clicked');
-                });
-            });
-        }
-
-        loadCards();</script>
-    <script>
-        function toggleMenu() {
-            // const navLinks = document.getElementById('navLinks');
-            // navLinks.classList.toggle('active');
-        }
-    </script>
-    <script>
-        // document.querySelectorAll('.item3-img').forEach(img => {
-        //     img.addEventListener('click', function () {
-        //         this.classList.toggle('clicked');
-        //     });
-        // });
-    </script>
-
-
-
-    <script>
-        // document.querySelectorAll('.item2-1-img').forEach(img => {
-        //     img.addEventListener('click', function () {
-        //         this.classList.toggle('star-select');
-        //     });
-        // });
-
-        const navLinks = document.querySelectorAll(".nav-links a");
-
-        navLinks.forEach(link => {
-            link.addEventListener("click", (e) => {
-                e.preventDefault();
-
-                // Remove classes from all links
-                navLinks.forEach(l => {
-                    l.classList.remove("selected-link");
-                    l.querySelector(".line").classList.remove("default-selected-line");
-                    l.classList.remove("default-selected-text");
-                });
-
-                // Add classes to clicked link
-                link.classList.add("selected-link");
-                link.querySelector(".line").classList.add("default-selected-line");
-                link.classList.add("default-selected-text");
-            });
-        });
-
-
-        const sections = document.querySelectorAll(".section");
-
-        sections.forEach(section => {
-            section.querySelector("a").addEventListener("click", (e) => {
-                e.preventDefault(); // optional, if you want to stop jump
-
-                // Remove the class from all section lines
-                sections.forEach(s => {
-                    s.querySelector(".section-line").classList.remove("default-selected-section");
-                });
-
-                // Add the class to the clicked section's line
-                section.querySelector(".section-line").classList.add("default-selected-section");
-            });
-        });
-
-    </script>
-
-    <script>
-        function setupHoverPanel(iconSelector, panelSelector, activeClass = 'active') {
-            const icon = document.querySelector(iconSelector);
-            const panel = document.querySelector(panelSelector);
-            let hover = false;
-
-            function showPanel() {
-                panel.classList.add(activeClass);
-            }
-            function hidePanel() {
-                panel.classList.remove(activeClass);
-            }
-
-            icon.addEventListener('mouseenter', showPanel);
-            icon.addEventListener('mouseleave', () => {
-                setTimeout(() => {
-                    if (!hover) hidePanel();
-                }, 50);
-            });
-
-            panel.addEventListener('mouseenter', () => {
-                hover = true;
-                showPanel();
-            });
-            panel.addEventListener('mouseleave', () => {
-                hover = false;
-                hidePanel();
-            });
-        }
-        setupHoverPanel('.alert-icon', '#alertPanel');
-        setupHoverPanel('.announcements-icon', '#announcementPanel');
-        setupHoverPanel('.hamburger', '#dropdownMenu', 'active');
-    </script>
-    <script>
-        // Dropdown menu toggle
-        document.querySelector('.hamburger').onclick = function (e) {
-            e.stopPropagation();
-            document.getElementById('dropdownMenu').classList.toggle('active');
-        };
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function (e) {
-            var menu = document.getElementById('dropdownMenu');
-            if (menu.classList.contains('active')) {
-                menu.classList.remove('active');
-            }
-        });
-
-        // Prevent dropdown from closing when clicking inside
-        document.getElementById('dropdownMenu').onclick = function (e) {
-            e.stopPropagation();
-        };
-
-        // Submenu toggle (reuse your function, but works for dropdown)
-        function toggleSubMenu(e, id) {
-            e.preventDefault();
-            var submenu = document.getElementById(id);
-            submenu.classList.toggle('active');
-            var link = e.currentTarget;
-            link.classList.toggle('open');
-        }
-    </script>
-    <script>
-        // ...existing code...
-        // Removed click event listener for announcements-icon to enable hover behavior
-
-        // Close panel when clicking outside
-        document.addEventListener('click', function (e) {
-            var panel = document.getElementById('announcementPanel');
-            if (panel.classList.contains('active')) {
-                panel.classList.remove('active');
-            }
-        });
-
-        // Prevent panel from closing when clicking inside
-        document.getElementById('announcementPanel').onclick = function (e) {
-            e.stopPropagation();
-        };
-        // ...existing code...
-
-        // ...existing code...
-        function countAnnouncementCheckboxes() {
-            const checkboxes = document.querySelectorAll('#announcementPanel .custom-checkbox input[type="checkbox"]');
-            let ticked = 0, unticked = 0;
-            checkboxes.forEach(cb => {
-                if (cb.checked) ticked++;
-                else unticked++;
-            });
-            return { ticked, unticked };
-        }
-
-        // Function to update the div with the new number
-        function updateAnnouncemnt() {
-            const announcemntCounts = document.getElementById('announcemntCounts');
-            announcemntCounts.innerText = countAnnouncementCheckboxes().ticked;;
-        }
-        setInterval(updateAnnouncemnt, 1000);
-
-        // Example usage:
-        // const counts = countAnnouncementCheckboxes();
-        // console.log('Ticked:', counts.ticked, 'Unticked:', counts.unticked);
-        // ...existing code...
-    </script>
-
-    <script>
-        // ...existing code...
-        document.querySelector('.alert-icon').onclick = function (e) {
-            e.stopPropagation();
-            document.getElementById('alertPanel').classList.toggle('active');
-        };
-
-        // Close alert panel when clicking outside
-        document.addEventListener('click', function (e) {
-            var panel = document.getElementById('alertPanel');
-            if (panel && panel.classList.contains('active')) {
-                panel.classList.remove('active');
-            }
-        });
-
-        // Prevent alert panel from closing when clicking inside
-        document.getElementById('alertPanel').onclick = function (e) {
-            e.stopPropagation();
-        };
-
-        // Count checked/unchecked checkboxes in alert panel
-        function countAlertCheckboxes() {
-            const checkboxes = document.querySelectorAll('#alertPanel .custom-checkbox input[type="checkbox"]');
-            let ticked = 0, unticked = 0;
-            checkboxes.forEach(cb => {
-                if (cb.checked) ticked++;
-                else unticked++;
-            });
-            return { ticked, unticked };
-        }
-
-        // Update alert count badge
-        function updateAlertCount() {
-            const alertCounts = document.getElementById('alertCounts');
-            alertCounts.innerText = countAlertCheckboxes().ticked;
-        }
-        setInterval(updateAlertCount, 1000);
-        // ...existing code...
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

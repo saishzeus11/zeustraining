@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Acceleration",
+    "subject": "Physics",
+    "grade": "7",
+    "increment": 2,
+    "units": 4,
+    "lessons": 18,
+    "topics": 24,
+    "selectOptions": ["Mr. Frank's Class B", "Most Popular", "Oldest"],
+    "studentsInfo": "50 Students | 24-Jan-2020 - 21-Aug-2020",
+    "cardClass": "card1",
+    "clicked": []
+  },
+  {
+    "title": "Displacement, Velocity and Speed",
+    "subject": "Physics 2",
+    "grade": "6",
+    "increment": 3,
+    "units": 2,
+    "lessons": 15,
+    "topics": 20,
+    "selectOptions": ["No Classes", "Most Popular", "Oldest"],
+    "studentsInfo": "",
+    "cardClass": "card2",
+    "clicked": ["course", "grade"]
+  },
+  {
+    "title": "Introduction to Biology: Micro organisms and how they affec...",
+    "subject": "Biology",
+    "grade": "4",
+    "increment": 1,
+    "units": 5,
+    "lessons": 16,
+    "topics": 22,
+    "selectOptions": ["All Classes", "Most Popular", "Oldest"],
+    "studentsInfo": "300 Students",
+    "cardClass": "card3",
+    "clicked": ["course", "grade"]
+  },
+  {
+    "title": "Introduction to HIgh School Mathematics",
+    "subject": "Mathematics",
+    "grade": "8",
+    "increment": 3,
+    "units": 4,
+    "lessons": 18,
+    "topics": 24,
+    "selectOptions": ["Mr. Frank's Class A", "Most Popular", "Oldest"],
+    "studentsInfo": "44 Students | 14-Oct-2019 - 20-Aug-2020",
+    "cardClass": "card4",
+    "clicked": [],
+    "starSelect": true
+  }
+]

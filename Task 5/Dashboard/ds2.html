@@ -10,8 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Permanent+Marker&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
-   
-
+    <link rel="stylesheet" href="one.css">
 </head>
 
 <body>
@@ -669,6 +668,9 @@
             data.alerts.forEach(alert => {
                 const alertItem = document.createElement('div');
                 alertItem.className = 'alert-item';
+                if (!alert.checked) {
+                    alertItem.classList.add('unchecked');
+                }
 
                 alertItem.innerHTML = `
                     <div class="alert-info">
@@ -704,7 +706,16 @@
             updateAlertCount();
 
             alertList.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-                cb.addEventListener('change', updateAlertCount);
+                cb.addEventListener('change', (e) => {
+                    const checkbox = e.target;
+                    const alertItem = checkbox.closest('.alert-item');
+                    if (checkbox.checked) {
+                        alertItem.classList.remove('unchecked');
+                    } else {
+                        alertItem.classList.add('unchecked');
+                    }
+                    updateAlertCount();
+                });
             });
         }
 
@@ -722,6 +733,9 @@
             data.announcements.forEach(announcement => {
                 const announcementItem = document.createElement('div');
                 announcementItem.className = 'announcement-item';
+                if (!announcement.checked) {
+                    announcementItem.classList.add('unchecked');
+                }
 
                 announcementItem.innerHTML = `
                     <div class="announcement-info">
@@ -757,7 +771,16 @@
             updateAnnouncementCount();
 
             announcementList.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-                cb.addEventListener('change', updateAnnouncementCount);
+                cb.addEventListener('change', (e) => {
+                    const checkbox = e.target;
+                    const announcementItem = checkbox.closest('.announcement-item');
+                    if (checkbox.checked) {
+                        announcementItem.classList.remove('unchecked');
+                    } else {
+                        announcementItem.classList.add('unchecked');
+                    }
+                    updateAnnouncementCount();
+                });
             });
         }
 
